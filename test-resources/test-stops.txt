@@ -1,0 +1,11 @@
+"stop_id","stop_code","stop_name","stop_desc","stop_lat","stop_lon","stop_url","location_type","parent_station","wheelchair_boarding"
+1271,"1271","Kołłątaja 11-15","",53.443798,14.548237,"http://www.zditm.szczecin.pl/rozklady/",1,,
+10111,"10111","Turzyn Dworzec 11","",53.428414,14.527251,"http://www.zditm.szczecin.pl/s10111",,,
+10112,"10112","Turzyn Dworzec 12","",53.427956,14.529595,"http://www.zditm.szczecin.pl/s10112",,,
+10211,"10211","Turzyn 11","",53.429218,14.531897,"http://www.zditm.szczecin.pl/s10211",,,
+10212,"10212","Turzyn 12","",53.428561,14.531929,"http://www.zditm.szczecin.pl/s10212",,,1
+10221,"10221","Turzyn 21","",53.427908,14.532659,"http://www.zditm.szczecin.pl/s10221",,,
+10311,"10311","Bolesława Śmiałego 11","",53.427642,14.535148,"http://www.zditm.szczecin.pl/s10311",,,
+10412,"10412","Plac Kościuszki 12","",53.427574,14.537168,"http://www.zditm.szczecin.pl/s10412",,,1
+10421,"10421","Plac Kościuszki 21","",53.427121,14.537776,"http://www.zditm.szczecin.pl/s10421",,,
+10422,"10422","Plac Kościuszki 22","",53.426930,14.538023,"http://www.zditm.szczecin.pl/s10422",,,
