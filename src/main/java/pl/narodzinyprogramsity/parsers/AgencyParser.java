@@ -1,4 +1,4 @@
-package pl.narodzinyprogramsity.parser;
+package pl.narodzinyprogramsity.parsers;
 
 import pl.narodzinyprogramsity.models.Agency;
 import pl.narodzinyprogramsity.exceptions.NotCorrectLineException;

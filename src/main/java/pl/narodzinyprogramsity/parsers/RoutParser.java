@@ -1,4 +1,4 @@
-package pl.narodzinyprogramsity.parser;
+package pl.narodzinyprogramsity.parsers;
 
 import pl.narodzinyprogramsity.exceptions.NotCorrectLineException;
 import pl.narodzinyprogramsity.models.Rout;

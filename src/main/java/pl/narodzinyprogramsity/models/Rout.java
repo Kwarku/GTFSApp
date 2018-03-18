@@ -5,6 +5,8 @@ import pl.narodzinyprogramsity.utils.TextUtils;
 import java.util.Objects;
 
 public class Rout extends FeedModel {
+    public static Rout NOT_FOUND = new Rout();
+
     private String routeShortName;
     private String routeLongName;
     private String routeDesc;

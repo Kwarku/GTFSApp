@@ -1,12 +1,15 @@
 package pl.narodzinyprogramsity.parser;
 
+import org.jetbrains.annotations.NotNull;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+import pl.narodzinyprogramsity.parsers.RoutParser;
 import pl.narodzinyprogramsity.models.Rout;
 import pl.narodzinyprogramsity.models.RoutType;
 import pl.narodzinyprogramsity.exceptions.NotCorrectLineException;
+import pl.narodzinyprogramsity.utils.CreateRoute;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -19,14 +22,10 @@ public class RoutParserTest {
     @Before
     public void setUp() {
         routParser = new RoutParser();
-        testRoute = new Rout("1",
-                "1",
-                "Głębokie - Potulicka",
-                "",
-                RoutType.getType(0),
-                "http://www.zditm.szczecin.pl/rozklady/index.html",
-                "", "");
+        testRoute = CreateRoute.getTestRoute();
     }
+
+
 
     @Test
     public void parserTest() throws NotCorrectLineException {

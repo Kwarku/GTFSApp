@@ -1,4 +1,4 @@
-package pl.narodzinyprogramsity.parser;
+package pl.narodzinyprogramsity.parsers;
 
 import pl.narodzinyprogramsity.models.FeedModel;
 import pl.narodzinyprogramsity.exceptions.NotCorrectLineException;
@@ -14,7 +14,7 @@ public abstract class BaseFeedParser <T extends FeedModel> implements FeedParser
 
     public T parseTo(String line) throws NotCorrectLineException {
         line = line.replaceAll("\"", "");
-        splitFeedInfo = line.split(FeedParser.DATA_DELIMITTER, -1);
+        splitFeedInfo = line.split(DATA_DELIMITTER, -1);
         if (numberOfElements != splitFeedInfo.length) {
             throw new NotCorrectLineException();
         }

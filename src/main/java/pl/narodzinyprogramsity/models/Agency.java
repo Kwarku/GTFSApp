@@ -5,6 +5,8 @@ import pl.narodzinyprogramsity.utils.TextUtils;
 import java.util.Objects;
 
 public class Agency extends FeedModel {
+    public static Agency NOT_FOUND = new Agency();
+
     private String agencyName;
     private String agencyUrl;
     private String agencyTimezone;
