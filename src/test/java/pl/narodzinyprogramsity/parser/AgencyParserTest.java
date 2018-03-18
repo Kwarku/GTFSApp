@@ -7,6 +7,7 @@ import org.junit.rules.ExpectedException;
 import pl.narodzinyprogramsity.parsers.AgencyParser;
 import pl.narodzinyprogramsity.models.Agency;
 import pl.narodzinyprogramsity.exceptions.NotCorrectLineException;
+import pl.narodzinyprogramsity.utils.CreateAgency;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -19,7 +20,7 @@ public class AgencyParserTest {
     @Before
     public void setUp() {
         agencyParser = new AgencyParser();
-        testAgency = new Agency("ZDiTM Szczecin", "http://www.zditm.szczecin.pl", "Europe/Warsaw", "pl", "91 480 04 03");
+        testAgency = CreateAgency.getTestAgency();
     }
 
     @Test
