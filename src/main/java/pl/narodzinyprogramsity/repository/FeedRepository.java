@@ -11,7 +11,7 @@ public interface FeedRepository<T extends FeedModel> {
 
     List<T> getAll();
 
-    void update(T feedObj);
+    void update(T t, T newT);
 
     void delete(T feedObj);
 

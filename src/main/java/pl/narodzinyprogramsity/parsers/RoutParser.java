@@ -25,20 +25,22 @@ public class RoutParser extends BaseFeedParser<Rout> {
     public Rout parseTo(String line) throws NotCorrectLineException {
         super.parseTo(line);
         Rout rout = new Rout();
-        rout.setId(splitFeedInfo[ROUTE_ID].replaceAll("\"", ""));
+        rout.setId(splitFeedInfo[ROUTE_ID]);
         rout.setRouteShortName(splitFeedInfo[ROUTE_SHORT_NAME]);
         rout.setRouteLongName(splitFeedInfo[ROUTE_LONG_NAME]);
         rout.setRouteDesc(splitFeedInfo[ROUTE_DESC]);
+        validateFeedInfo(rout);
+        rout.setRouteUrl(splitFeedInfo[ROUTE_URL]);
+        rout.setRouteColor(splitFeedInfo[ROUTE_COLOR]);
+        rout.setRouteTextColor(splitFeedInfo[ROUTE_TEXT_COLOR]);
+        return rout;
+    }
 
+    private void validateFeedInfo(Rout rout) {
         if (splitFeedInfo[ROUTE_TYPE].equals("")) {
             rout.setRouteType(RoutType.UNKNOWN);
         } else {
             rout.setRouteType(RoutType.getType(Integer.parseInt(splitFeedInfo[ROUTE_TYPE])));
         }
-
-        rout.setRouteUrl(splitFeedInfo[ROUTE_URL]);
-        rout.setRouteColor(splitFeedInfo[ROUTE_COLOR]);
-        rout.setRouteTextColor(splitFeedInfo[ROUTE_TEXT_COLOR]);
-        return rout;
     }
 }

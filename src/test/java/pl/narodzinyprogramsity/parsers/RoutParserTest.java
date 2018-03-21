@@ -1,11 +1,9 @@
-package pl.narodzinyprogramsity.parser;
+package pl.narodzinyprogramsity.parsers;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
-import pl.narodzinyprogramsity.parsers.RoutParser;
 import pl.narodzinyprogramsity.models.Rout;
 import pl.narodzinyprogramsity.models.RoutType;
 import pl.narodzinyprogramsity.exceptions.NotCorrectLineException;

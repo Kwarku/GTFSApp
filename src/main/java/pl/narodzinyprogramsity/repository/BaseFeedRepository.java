@@ -17,8 +17,9 @@ public abstract class BaseFeedRepository<T extends FeedModel> implements FeedRep
     @Override
     public String add(T t) {
         Objects.requireNonNull(t);
+
         boolean result = list.add(t);
-        if (result){
+        if (result) {
             return t.getId();
         }
         return TextUtils.EMPTY_STRING;
@@ -26,12 +27,9 @@ public abstract class BaseFeedRepository<T extends FeedModel> implements FeedRep
 
     @Override
     public T get(String id) {
-        for (T obj : list){
-            if (obj.getId().equals(id)) {
-                return obj;
-            }
-        }
-        return null;
+        Objects.requireNonNull(id);
+
+        return getObject(id);
     }
 
     @Override
@@ -40,17 +38,38 @@ public abstract class BaseFeedRepository<T extends FeedModel> implements FeedRep
     }
 
     @Override
-    public void update(T feedObj) {
-        list.set(Integer.parseInt(feedObj.getId()), feedObj);
+    public void update(T t, T newT) {
+        Objects.requireNonNull(t);
+
+        list.set(getIndex(t), newT);
     }
 
     @Override
-    public void delete(T feedObj) {
-        list.remove(feedObj);
+    public void delete(T t) {
+        Objects.requireNonNull(t);
+
+        list.remove(t);
     }
 
     @Override
     public void delete(String id) {
-        list.remove(Integer.parseInt(id));
+        Objects.requireNonNull(id);
+
+        T t = getObject(id);
+        Objects.requireNonNull(t);
+        list.remove(t);
+    }
+
+    private T getObject(String id) {
+        for (T obj : list) {
+            if (obj.getId().equals(id)) {
+                return obj;
+            }
+        }
+        return null;
+    }
+
+    private int getIndex(T t) {
+        return list.indexOf(get(t.getId()));
     }
 }

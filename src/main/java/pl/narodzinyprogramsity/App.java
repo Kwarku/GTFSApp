@@ -28,7 +28,7 @@ public class App {
             e.printStackTrace();
         }
         agencyRepository.getAll().forEach(System.out::println);
-        RepositoryModule.getRoutRespository().getAll().forEach(System.out::println);
+        RepositoryModule.getRoutRepository().getAll().forEach(System.out::println);
 
     }
 }

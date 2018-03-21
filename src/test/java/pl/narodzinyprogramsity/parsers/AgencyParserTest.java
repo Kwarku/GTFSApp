@@ -1,10 +1,9 @@
-package pl.narodzinyprogramsity.parser;
+package pl.narodzinyprogramsity.parsers;
 
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
-import pl.narodzinyprogramsity.parsers.AgencyParser;
 import pl.narodzinyprogramsity.models.Agency;
 import pl.narodzinyprogramsity.exceptions.NotCorrectLineException;
 import pl.narodzinyprogramsity.utils.CreateAgency;
