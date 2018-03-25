@@ -32,8 +32,6 @@ public class StopRepositoryTest {
         testRepository.list.add(Stop.NOT_FOUND);
         testRepository.list.add(testStop);
 
-//        stops.clear();
-
     }
 
     @Test
@@ -96,12 +94,15 @@ public class StopRepositoryTest {
     @Test
     public void deleteByObjectTest() {
         stops = testRepository.getAll();
-        assertThat(stops.size()).isEqualTo(3);
+        int startSize = stops.size();
 
         testRepository.delete(testStop);
 
         stops = testRepository.getAll();
-        assertThat(stops.size()).isEqualTo(2);
+        int endSize = stops.size();
+
+        assertThat(startSize).isEqualTo(3).isNotEqualTo(endSize);
+        assertThat(endSize).isEqualTo(2);
     }
 
     @Test
@@ -115,13 +116,15 @@ public class StopRepositoryTest {
     @Test
     public void deleteByIdTest() {
         stops = testRepository.getAll();
-        assertThat(stops.size()).isEqualTo(3);
+        int startSize = stops.size();
 
         testRepository.delete(testStop.getId());
         testRepository.delete(new Stop().getId());
-
         stops = testRepository.getAll();
-        assertThat(stops.size()).isEqualTo(1);
+        int endSize = stops.size();
+
+        assertThat(startSize).isEqualTo(3).isNotEqualTo(endSize);
+        assertThat(endSize).isEqualTo(1);
     }
 
     @Test
