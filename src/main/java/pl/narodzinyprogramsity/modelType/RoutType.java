@@ -1,4 +1,4 @@
-package pl.narodzinyprogramsity.models;
+package pl.narodzinyprogramsity.modelType;
 
 public enum RoutType {
     TRAM(0),

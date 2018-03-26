@@ -2,7 +2,7 @@ package pl.narodzinyprogramsity.parsers;
 
 import pl.narodzinyprogramsity.exceptions.NotCorrectLineException;
 import pl.narodzinyprogramsity.models.Rout;
-import pl.narodzinyprogramsity.models.RoutType;
+import pl.narodzinyprogramsity.modelType.RoutType;
 
 public class RoutParser extends BaseFeedParser<Rout> {
 

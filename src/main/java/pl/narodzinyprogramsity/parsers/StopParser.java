@@ -1,9 +1,9 @@
 package pl.narodzinyprogramsity.parsers;
 
 import pl.narodzinyprogramsity.exceptions.NotCorrectLineException;
-import pl.narodzinyprogramsity.models.LocationType;
+import pl.narodzinyprogramsity.modelType.LocationType;
 import pl.narodzinyprogramsity.models.Stop;
-import pl.narodzinyprogramsity.models.WheelchairBoardingType;
+import pl.narodzinyprogramsity.modelType.WheelchairBoardingType;
 
 public class StopParser extends BaseFeedParser<Stop> {
 

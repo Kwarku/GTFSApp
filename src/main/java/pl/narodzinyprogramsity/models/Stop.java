@@ -1,5 +1,7 @@
 package pl.narodzinyprogramsity.models;
 
+import pl.narodzinyprogramsity.modelType.LocationType;
+import pl.narodzinyprogramsity.modelType.WheelchairBoardingType;
 import pl.narodzinyprogramsity.utils.TextUtils;
 
 import java.util.Objects;

@@ -1,5 +1,6 @@
 package pl.narodzinyprogramsity.models;
 
+import pl.narodzinyprogramsity.modelType.RoutType;
 import pl.narodzinyprogramsity.utils.TextUtils;
 
 import java.util.Objects;

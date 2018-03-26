@@ -1,8 +1,7 @@
 package pl.narodzinyprogramsity.utils;
 
-import org.jetbrains.annotations.NotNull;
 import pl.narodzinyprogramsity.models.Rout;
-import pl.narodzinyprogramsity.models.RoutType;
+import pl.narodzinyprogramsity.modelType.RoutType;
 
 public class CreateRoute {
 

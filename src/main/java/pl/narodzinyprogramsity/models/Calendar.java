@@ -1,5 +1,7 @@
 package pl.narodzinyprogramsity.models;
 
+import java.time.LocalDate;
+
 public class Calendar extends FeedModel {
 
 
@@ -11,14 +13,14 @@ public class Calendar extends FeedModel {
     private boolean isSaturday;
     private boolean isSunday;
 
-    private String startDate;
-    private String endDate;
+    private LocalDate startDate;
+    private LocalDate endDate;
 
 
     public Calendar(String service_id,
                     boolean isMonday, boolean isTuesday, boolean isWednesday,
                     boolean isThursday ,boolean isFriday, boolean isSaturday,
-                    boolean isSunday, String startDate, String endDate) {
+                    boolean isSunday, LocalDate startDate, LocalDate endDate) {
 
         super(service_id);
         this.isMonday = isMonday;
@@ -89,19 +91,19 @@ public class Calendar extends FeedModel {
         isSunday = sunday;
     }
 
-    public String getStartDate() {
+    public LocalDate  getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(String startDate) {
+    public void setStartDate(LocalDate startDate) {
         this.startDate = startDate;
     }
 
-    public String getEndDate() {
+    public LocalDate getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(String endDate) {
+    public void setEndDate(LocalDate endDate) {
         this.endDate = endDate;
     }
 

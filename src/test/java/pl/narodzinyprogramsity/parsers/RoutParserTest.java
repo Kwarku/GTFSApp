@@ -5,7 +5,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import pl.narodzinyprogramsity.models.Rout;
-import pl.narodzinyprogramsity.models.RoutType;
+import pl.narodzinyprogramsity.modelType.RoutType;
 import pl.narodzinyprogramsity.exceptions.NotCorrectLineException;
 import pl.narodzinyprogramsity.utils.CreateRoute;
 

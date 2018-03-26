@@ -5,9 +5,9 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import pl.narodzinyprogramsity.exceptions.NotCorrectLineException;
-import pl.narodzinyprogramsity.models.LocationType;
+import pl.narodzinyprogramsity.modelType.LocationType;
 import pl.narodzinyprogramsity.models.Stop;
-import pl.narodzinyprogramsity.models.WheelchairBoardingType;
+import pl.narodzinyprogramsity.modelType.WheelchairBoardingType;
 import pl.narodzinyprogramsity.utils.CreateStop;
 
 import static org.assertj.core.api.Assertions.assertThat;

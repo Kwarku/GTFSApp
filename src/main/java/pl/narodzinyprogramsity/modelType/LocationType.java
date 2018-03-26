@@ -1,4 +1,4 @@
-package pl.narodzinyprogramsity.models;
+package pl.narodzinyprogramsity.modelType;
 
 public enum LocationType {
     STOP(0),STATION(1), ENTER_OR_EXIT(2), UNKNOWN(-1);
