@@ -1,14 +1,14 @@
 package pl.narodzinyprogramsity.module;
 
 import pl.narodzinyprogramsity.models.Agency;
-import pl.narodzinyprogramsity.models.Rout;
+import pl.narodzinyprogramsity.models.Route;
 import pl.narodzinyprogramsity.models.Trip;
 import pl.narodzinyprogramsity.models.Stop;
 import pl.narodzinyprogramsity.parsers.*;
 
 public class ParserModule {
     private static AgencyParser agencyParser;
-    private static RoutParser routParser;
+    private static RouteParser routeParser;
     private static TripParser tripParser;
     private static StopParser stopParser;
 
@@ -19,11 +19,11 @@ public class ParserModule {
         return agencyParser;
     }
 
-    public static FeedParser<Rout> getRoutParser() {
-        if (routParser == null) {
-            routParser = new RoutParser();
+    public static FeedParser<Route> getRouteParser() {
+        if (routeParser == null) {
+            routeParser = new RouteParser();
         }
-        return routParser;
+        return routeParser;
     }
 
     public static FeedParser<Trip> getTripParser() {

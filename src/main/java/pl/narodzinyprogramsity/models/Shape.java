@@ -1,14 +1,18 @@
 package pl.narodzinyprogramsity.models;
 
+import pl.narodzinyprogramsity.utils.TextUtils;
+
 import java.util.Objects;
 
-public class Shape extends FeedModel{
-    //shape_id,shape_pt_lat,shape_pt_lon,shape_pt_sequence
-
+public class Shape extends FeedModel {
     private String shapePtLat;
     private String shapePtLon;
     private String shapePtSequence;
 
+
+    public Shape() {
+        super(TextUtils.EMPTY_STRING);
+    }
 
     public Shape(String shapeId, String shapePtLat, String shapePtLon, String shapePtSequence) {
         super(shapeId);

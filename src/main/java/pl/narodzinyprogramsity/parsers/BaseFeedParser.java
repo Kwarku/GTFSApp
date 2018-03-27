@@ -3,6 +3,8 @@ package pl.narodzinyprogramsity.parsers;
 import pl.narodzinyprogramsity.models.FeedModel;
 import pl.narodzinyprogramsity.exceptions.NotCorrectLineException;
 
+import java.util.zip.DataFormatException;
+
 public abstract class BaseFeedParser <T extends FeedModel> implements FeedParser<T> {
     private int numberOfElements;
     protected String[] splitFeedInfo;

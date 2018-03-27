@@ -1,7 +1,7 @@
 package pl.narodzinyprogramsity.module;
 
 import pl.narodzinyprogramsity.models.Agency;
-import pl.narodzinyprogramsity.models.Rout;
+import pl.narodzinyprogramsity.models.Route;
 import pl.narodzinyprogramsity.models.Trip;
 import pl.narodzinyprogramsity.models.Stop;
 import pl.narodzinyprogramsity.parsers.FeedParser;
@@ -28,16 +28,16 @@ public class ReaderModule {
         return agencyReader;
     }
 
-    public static FeedReader<Rout> getRoutReader(FeedRepository<Rout> repository, FeedParser<Rout> parser) {
+    public static FeedReader<Route> getRoutReader(FeedRepository<Route> repository, FeedParser<Route> parser) {
         if (routeReader == null) {
             routeReader = new RouteReader(repository, parser);
         }
         return routeReader;
     }
 
-    public static FeedReader<Rout> getRoutReader() {
+    public static FeedReader<Route> getRoutReader() {
         if (routeReader == null) {
-            routeReader = new RouteReader(RepositoryModule.getRoutRepository(), ParserModule.getRoutParser());
+            routeReader = new RouteReader(RepositoryModule.getRouteRepository(), ParserModule.getRouteParser());
         }
         return routeReader;
     }

@@ -20,9 +20,16 @@ public class Trip extends FeedModel{
        super(TextUtils.EMPTY_STRING);
    }
 
-    public Trip(String routeId, String serviceId, String tripId,
-                String tripHeadSign, String directionId, String blockId,
-                int shapeId, boolean isWheelchairAccessible, boolean isLowFloor) {
+    public Trip(String routeId,
+                String serviceId,
+                String tripId,
+                String tripHeadSign,
+                String directionId,
+                String blockId,
+                int shapeId,
+                boolean isWheelchairAccessible,
+                boolean isLowFloor) {
+
         super(tripId);
         this.routeId = routeId;
         this.serviceId = serviceId;
@@ -116,7 +123,14 @@ public class Trip extends FeedModel{
     @Override
     public int hashCode() {
 
-        return Objects.hash(routeId, serviceId, tripHeadSign, directionId, blockId, shapeId, wheelchairAccessible, lowFloor);
+        return Objects.hash(routeId,
+                serviceId,
+                tripHeadSign,
+                directionId,
+                blockId,
+                shapeId,
+                wheelchairAccessible,
+                lowFloor);
     }
 
     @Override

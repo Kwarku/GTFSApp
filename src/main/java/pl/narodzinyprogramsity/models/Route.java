@@ -5,8 +5,8 @@ import pl.narodzinyprogramsity.utils.TextUtils;
 
 import java.util.Objects;
 
-public class Rout extends FeedModel {
-    public static Rout NOT_FOUND = new Rout();
+public class Route extends FeedModel {
+    public static Route NOT_FOUND = new Route();
 
     private String routeShortName;
     private String routeLongName;
@@ -16,8 +16,15 @@ public class Rout extends FeedModel {
     private String routeColor;
     private String routeTextColor;
 
-    public Rout(String routeId, String routeShortName, String routeLongName, String routeDesc,
-                RoutType routeType, String routeUrl, String routeColor, String routeTextColor) {
+    public Route(String routeId,
+                 String routeShortName,
+                 String routeLongName,
+                 String routeDesc,
+                 RoutType routeType,
+                 String routeUrl,
+                 String routeColor,
+                 String routeTextColor) {
+
         super(routeId);
         this.routeShortName = routeShortName;
         this.routeLongName = routeLongName;
@@ -28,7 +35,7 @@ public class Rout extends FeedModel {
         this.routeTextColor = routeTextColor;
     }
 
-    public Rout() {
+    public Route() {
         super(TextUtils.EMPTY_STRING);
     }
 
@@ -89,30 +96,35 @@ public class Rout extends FeedModel {
         this.routeTextColor = routeTextColor;
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Rout rout = (Rout) o;
-        return Objects.equals(routeShortName, rout.routeShortName) &&
-                Objects.equals(routeLongName, rout.routeLongName) &&
-                Objects.equals(routeDesc, rout.routeDesc) &&
-                routeType == rout.routeType &&
-                Objects.equals(routeUrl, rout.routeUrl) &&
-                Objects.equals(routeColor, rout.routeColor) &&
-                Objects.equals(routeTextColor, rout.routeTextColor);
+        Route route = (Route) o;
+        return Objects.equals(routeShortName, route.routeShortName) &&
+                Objects.equals(routeLongName, route.routeLongName) &&
+                Objects.equals(routeDesc, route.routeDesc) &&
+                routeType == route.routeType &&
+                Objects.equals(routeUrl, route.routeUrl) &&
+                Objects.equals(routeColor, route.routeColor) &&
+                Objects.equals(routeTextColor, route.routeTextColor);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(routeShortName, routeLongName, routeDesc, routeType, routeUrl, routeColor, routeTextColor);
+        return Objects.hash(routeShortName,
+                routeLongName,
+                routeDesc,
+                routeType,
+                routeUrl,
+                routeColor,
+                routeTextColor);
     }
 
     @Override
     public String toString() {
-        return "Rout{" +
+        return "Route{" +
                 "routeShortName='" + routeShortName + '\'' +
                 ", routeLongName='" + routeLongName + '\'' +
                 ", routeDesc='" + routeDesc + '\'' +

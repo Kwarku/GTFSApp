@@ -1,13 +1,13 @@
 package pl.narodzinyprogramsity.module;
 
 import pl.narodzinyprogramsity.models.Agency;
-import pl.narodzinyprogramsity.models.Rout;
+import pl.narodzinyprogramsity.models.Route;
 import pl.narodzinyprogramsity.models.Trip;
 import pl.narodzinyprogramsity.models.Stop;
 import pl.narodzinyprogramsity.repository.*;
 
 public class RepositoryModule {
-    private static RoutRepository routRepository;
+    private static RouteRepository routeRepository;
     private static AgencyRepository agencyRepository;
     private static TripRepository tripRepository;
     private static StopRepository stopRepository;
@@ -20,11 +20,11 @@ public class RepositoryModule {
         return agencyRepository;
     }
 
-    public static FeedRepository<Rout> getRoutRepository() {
-        if (routRepository == null) {
-            routRepository = new RoutRepository();
+    public static FeedRepository<Route> getRouteRepository() {
+        if (routeRepository == null) {
+            routeRepository = new RouteRepository();
         }
-        return routRepository;
+        return routeRepository;
     }
 
     public static FeedRepository<Trip> getTripResources() {

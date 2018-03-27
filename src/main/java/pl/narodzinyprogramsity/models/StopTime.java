@@ -18,10 +18,18 @@ public class StopTime extends FeedModel {
     private PickupType pickupType;
     private DropOffType dropOffType;
 
+    public StopTime(){
+        super(TextUtils.EMPTY_STRING);
+    }
+
     public StopTime(String tripId,
-                    LocalTime arrivalTime, LocalTime departureTime,
-                    String stopId, String stopSequence, String stopHeadsign,
-                    PickupType pickupType, DropOffType dropOffType) {
+                    LocalTime arrivalTime,
+                    LocalTime departureTime,
+                    String stopId,
+                    String stopSequence,
+                    String stopHeadsign,
+                    PickupType pickupType,
+                    DropOffType dropOffType) {
 
         super(TextUtils.EMPTY_STRING);
         this.tripId = tripId;
@@ -116,7 +124,14 @@ public class StopTime extends FeedModel {
     @Override
     public int hashCode() {
 
-        return Objects.hash(tripId, arrivalTime, departureTime, stopId, stopSequence, stopHeadsign, pickupType, dropOffType);
+        return Objects.hash(tripId,
+                arrivalTime,
+                departureTime,
+                stopId,
+                stopSequence,
+                stopHeadsign,
+                pickupType,
+                dropOffType);
     }
 
     @Override

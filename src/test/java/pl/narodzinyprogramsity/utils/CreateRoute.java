@@ -1,12 +1,12 @@
 package pl.narodzinyprogramsity.utils;
 
-import pl.narodzinyprogramsity.models.Rout;
+import pl.narodzinyprogramsity.models.Route;
 import pl.narodzinyprogramsity.modelType.RoutType;
 
 public class CreateRoute {
 
-    public static Rout getTestRoute() {
-        return new Rout("1",
+    public static Route getTestRoute() {
+        return new Route("1",
                 "1",
                 "Głębokie - Potulicka",
                 "",

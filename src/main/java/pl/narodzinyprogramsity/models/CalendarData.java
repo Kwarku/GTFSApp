@@ -5,13 +5,17 @@ import pl.narodzinyprogramsity.utils.TextUtils;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class CaledarData extends FeedModel{
+public class CalendarData extends FeedModel {
 
     private String serviceId;
     private LocalDate data;
     private boolean isDataAvailable;
 
-    public CaledarData(String serviceId, LocalDate data, boolean isDataAvailable) {
+    public CalendarData() {
+        super(TextUtils.EMPTY_STRING);
+    }
+
+    public CalendarData(String serviceId, LocalDate data, boolean isDataAvailable) {
         super(TextUtils.EMPTY_STRING);
         this.serviceId = serviceId;
         this.data = data;
@@ -47,7 +51,7 @@ public class CaledarData extends FeedModel{
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        CaledarData that = (CaledarData) o;
+        CalendarData that = (CalendarData) o;
         return isDataAvailable == that.isDataAvailable &&
                 Objects.equals(serviceId, that.serviceId) &&
                 Objects.equals(data, that.data);
@@ -61,7 +65,7 @@ public class CaledarData extends FeedModel{
 
     @Override
     public String toString() {
-        return "CaledarData{" +
+        return "CalendarData{" +
                 "serviceId='" + serviceId + '\'' +
                 ", data=" + data +
                 ", isDataAvailable=" + isDataAvailable +

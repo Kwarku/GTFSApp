@@ -24,7 +24,8 @@ public class AgencyParserTest {
 
     @Test
     public void agencyParseTest() throws NotCorrectLineException {
-        Agency agency = agencyParser.parseTo("ZDiTM Szczecin,http://www.zditm.szczecin.pl,Europe/Warsaw,pl,91 480 04 03");
+        Agency agency = agencyParser.parseTo("ZDiTM Szczecin,http://www.zditm.szczecin.pl,Europe/Warsaw," +
+                "pl,91 480 04 03");
 
         assertThat(agency).isEqualTo(testAgency);
     }

@@ -1,12 +1,12 @@
 package pl.narodzinyprogramsity.readers;
 
-import pl.narodzinyprogramsity.models.Rout;
+import pl.narodzinyprogramsity.models.Route;
 import pl.narodzinyprogramsity.parsers.FeedParser;
 import pl.narodzinyprogramsity.repository.FeedRepository;
 
-public class RouteReader extends BaseFeedReader<Rout> {
+public class RouteReader extends BaseFeedReader<Route> {
 
-    public RouteReader(FeedRepository<Rout> repository, FeedParser<Rout> parser) {
+    public RouteReader(FeedRepository<Route> repository, FeedParser<Route> parser) {
         super(repository, parser);
     }
 

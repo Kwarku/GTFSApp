@@ -23,10 +23,16 @@ public class Stop extends FeedModel {
         super(TextUtils.EMPTY_STRING);
     }
 
-    public Stop(String stopId, String stopCode, String stopName,
-                String stopDesc, String stopLat, String stopLon,
-                String stopUrl, LocationType locationType,
-                String parentStation,WheelchairBoardingType wheelchairBoardingType) {
+    public Stop(String stopId,
+                String stopCode,
+                String stopName,
+                String stopDesc,
+                String stopLat,
+                String stopLon,
+                String stopUrl,
+                LocationType locationType,
+                String parentStation,
+                WheelchairBoardingType wheelchairBoardingType) {
 
         super(stopId);
         this.stopCode = stopCode;
@@ -132,7 +138,15 @@ public class Stop extends FeedModel {
     @Override
     public int hashCode() {
 
-        return Objects.hash(stopCode, stopName, stopDesc, stopLat, stopLon, stopUrl, locationType, parentStation, wheelchairBoardingType);
+        return Objects.hash(stopCode,
+                stopName,
+                stopDesc,
+                stopLat,
+                stopLon,
+                stopUrl,
+                locationType,
+                parentStation,
+                wheelchairBoardingType);
     }
 
     @Override

@@ -15,7 +15,12 @@ public class Agency extends FeedModel {
 
     public Agency() { super(TextUtils.EMPTY_STRING);}
 
-    public Agency(String agencyName, String agencyUrl, String agencyTimezone, String agencyLang, String agencyPhone) {
+    public Agency(String agencyName,
+                  String agencyUrl,
+                  String agencyTimezone,
+                  String agencyLang,
+                  String agencyPhone) {
+
         super(TextUtils.EMPTY_STRING);
         this.agencyName = agencyName;
         this.agencyUrl = agencyUrl;
@@ -79,7 +84,11 @@ public class Agency extends FeedModel {
     @Override
     public int hashCode() {
 
-        return Objects.hash(agencyName, agencyUrl, agencyTimezone, agencyLang, agencyPhone);
+        return Objects.hash(agencyName,
+                agencyUrl,
+                agencyTimezone,
+                agencyLang,
+                agencyPhone);
     }
 
     @Override
