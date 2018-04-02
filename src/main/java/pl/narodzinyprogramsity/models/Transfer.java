@@ -1,11 +1,13 @@
 package pl.narodzinyprogramsity.models;
 
 import pl.narodzinyprogramsity.modelType.TransferType;
+import pl.narodzinyprogramsity.utils.CreateID;
 import pl.narodzinyprogramsity.utils.TextUtils;
 
 import java.util.Objects;
 
 public class Transfer extends FeedModel {
+    public static final Transfer NOT_FOUND = new Transfer();
     private String fromStopId;
     private String toStopId;
     private TransferType transferType;
@@ -20,7 +22,7 @@ public class Transfer extends FeedModel {
                     TransferType transferType,
                     String minTransferTime) {
 
-        super(TextUtils.EMPTY_STRING);
+        super(CreateID.createId());
         this.fromStopId = fromStopId;
         this.toStopId = toStopId;
         this.transferType = transferType;

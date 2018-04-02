@@ -2,6 +2,7 @@ package pl.narodzinyprogramsity.parsers;
 
 import pl.narodzinyprogramsity.exceptions.NotCorrectLineException;
 import pl.narodzinyprogramsity.models.Calendar;
+import pl.narodzinyprogramsity.utils.CreateID;
 import pl.narodzinyprogramsity.utils.ParseStringInToBoolean;
 import pl.narodzinyprogramsity.utils.ParseStringToLocalData;
 
@@ -29,7 +30,6 @@ public class CalendarParser extends BaseFeedParser<Calendar> {
     public Calendar parseTo(String line) throws NotCorrectLineException {
         super.parseTo(line);
         Calendar calendar = new Calendar();
-
         setServiceId(calendar);
         setWeekAvailable(calendar);
         setStartData(calendar);

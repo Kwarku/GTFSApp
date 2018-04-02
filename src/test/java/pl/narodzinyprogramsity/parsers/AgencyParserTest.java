@@ -43,7 +43,6 @@ public class AgencyParserTest {
     public void agencyParseEmptyLineTest() throws NotCorrectLineException {
         Agency agency = agencyParser.parseTo(",,,,");
 
-        assertThat(agency.getId()).isBlank();
         assertThat(agency.getAgencyLang()).isBlank();
         assertThat(agency.getAgencyPhone()).isBlank();
         assertThat(agency.getAgencyTimezone()).isBlank();

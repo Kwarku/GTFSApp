@@ -19,7 +19,7 @@ public class StopTimeParserTest {
 
     @Before
     public void setUp() {
-        testStopTime = CreateStopTime.createTestStopTime();
+        testStopTime = CreateStopTime.createOriginalStopTime();
         parser = new StopTimeParser();
     }
 

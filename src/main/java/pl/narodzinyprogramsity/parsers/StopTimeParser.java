@@ -4,6 +4,7 @@ import pl.narodzinyprogramsity.exceptions.NotCorrectLineException;
 import pl.narodzinyprogramsity.modelType.DropOffType;
 import pl.narodzinyprogramsity.modelType.PickupType;
 import pl.narodzinyprogramsity.models.StopTime;
+import pl.narodzinyprogramsity.utils.CreateID;
 import pl.narodzinyprogramsity.utils.ParseStringToLocalTime;
 
 import java.time.LocalTime;
@@ -25,7 +26,6 @@ public class StopTimeParser extends BaseFeedParser<StopTime> {
         super(NUMBER_OF_ELEMENTS);
     }
 
-    //A-7549-POW-1-1-0,04:41:00,04:41:00,84613,1,,0,0
     @Override
     public StopTime parseTo(String line) throws NotCorrectLineException {
         super.parseTo(line);

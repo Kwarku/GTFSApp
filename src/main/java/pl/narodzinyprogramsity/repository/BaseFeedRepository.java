@@ -40,15 +40,21 @@ public abstract class BaseFeedRepository<T extends FeedModel> implements FeedRep
     @Override
     public void update(T t, T newT) {
         Objects.requireNonNull(t);
+        Objects.requireNonNull(newT);
 
-        list.set(getIndex(t), newT);
+        if (isObjExist(t)) {
+            doUpdate(t, newT);
+        }
     }
+
 
     @Override
     public void delete(T t) {
         Objects.requireNonNull(t);
 
-        list.remove(t);
+        if (isObjExist(t)) {
+            deleteObjFromList(t);
+        }
     }
 
     @Override
@@ -56,8 +62,35 @@ public abstract class BaseFeedRepository<T extends FeedModel> implements FeedRep
         Objects.requireNonNull(id);
 
         T t = getObject(id);
-        Objects.requireNonNull(t);
+        if (t == null) {
+            return;
+        }
+        if (isObjExist(t)) {
+            deleteObjFromList(t);
+        }
+
+    }
+
+    private void deleteObjFromList(T t) {
         list.remove(t);
+    }
+
+
+    private boolean isObjExist(T t) {
+        for (T obj : list) {
+            if (t.equals(obj)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void doUpdate(T t, T newT) {
+        list.set(getIndex(t), newT);
+    }
+
+    private int getIndex(T t) {
+        return list.indexOf(t);
     }
 
     private T getObject(String id) {
@@ -69,7 +102,4 @@ public abstract class BaseFeedRepository<T extends FeedModel> implements FeedRep
         return null;
     }
 
-    private int getIndex(T t) {
-        return list.indexOf(get(t.getId()));
-    }
 }

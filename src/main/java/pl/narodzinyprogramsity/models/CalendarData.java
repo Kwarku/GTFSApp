@@ -1,12 +1,13 @@
 package pl.narodzinyprogramsity.models;
 
+import pl.narodzinyprogramsity.utils.CreateID;
 import pl.narodzinyprogramsity.utils.TextUtils;
 
 import java.time.LocalDate;
 import java.util.Objects;
 
 public class CalendarData extends FeedModel {
-
+    public static final CalendarData NOT_FOUND = new CalendarData();
     private String serviceId;
     private LocalDate data;
     private boolean isDataAvailable;
@@ -16,7 +17,7 @@ public class CalendarData extends FeedModel {
     }
 
     public CalendarData(String serviceId, LocalDate data, boolean isDataAvailable) {
-        super(TextUtils.EMPTY_STRING);
+        super(CreateID.createId());
         this.serviceId = serviceId;
         this.data = data;
         this.isDataAvailable = isDataAvailable;

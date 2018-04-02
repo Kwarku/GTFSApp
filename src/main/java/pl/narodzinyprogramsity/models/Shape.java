@@ -5,6 +5,7 @@ import pl.narodzinyprogramsity.utils.TextUtils;
 import java.util.Objects;
 
 public class Shape extends FeedModel {
+    public static final Shape NOT_FOUND = new Shape();
     private String shapePtLat;
     private String shapePtLon;
     private String shapePtSequence;

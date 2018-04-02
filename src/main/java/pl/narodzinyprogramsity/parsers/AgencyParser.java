@@ -2,6 +2,7 @@ package pl.narodzinyprogramsity.parsers;
 
 import pl.narodzinyprogramsity.models.Agency;
 import pl.narodzinyprogramsity.exceptions.NotCorrectLineException;
+import pl.narodzinyprogramsity.utils.CreateID;
 
 public class AgencyParser extends BaseFeedParser<Agency> {
 

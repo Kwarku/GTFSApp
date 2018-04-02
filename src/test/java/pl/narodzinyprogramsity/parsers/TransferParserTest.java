@@ -21,7 +21,7 @@ public class TransferParserTest {
 
     @Before
     public void setUp() {
-        testTransfer = CreateTransfer.createTestTransfer();
+        testTransfer = CreateTransfer.createOriginalTransfer();
         parser = new TransferParser();
     }
 

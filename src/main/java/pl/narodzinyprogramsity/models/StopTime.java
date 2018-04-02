@@ -2,12 +2,14 @@ package pl.narodzinyprogramsity.models;
 
 import pl.narodzinyprogramsity.modelType.DropOffType;
 import pl.narodzinyprogramsity.modelType.PickupType;
+import pl.narodzinyprogramsity.utils.CreateID;
 import pl.narodzinyprogramsity.utils.TextUtils;
 
 import java.time.LocalTime;
 import java.util.Objects;
 
 public class StopTime extends FeedModel {
+    public static final StopTime NOT_FOUND = new StopTime();
 
     private String tripId;
     private LocalTime arrivalTime;
@@ -31,7 +33,7 @@ public class StopTime extends FeedModel {
                     PickupType pickupType,
                     DropOffType dropOffType) {
 
-        super(TextUtils.EMPTY_STRING);
+        super(CreateID.createId());
         this.tripId = tripId;
         this.arrivalTime = arrivalTime;
         this.departureTime = departureTime;
@@ -137,6 +139,7 @@ public class StopTime extends FeedModel {
     @Override
     public String toString() {
         return "StopTime{" +
+                "id :" + id +
                 "tripId='" + tripId + '\'' +
                 ", arrivalTime=" + arrivalTime +
                 ", departureTime=" + departureTime +

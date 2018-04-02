@@ -1,11 +1,13 @@
 package pl.narodzinyprogramsity.models;
 
+import pl.narodzinyprogramsity.utils.CreateID;
 import pl.narodzinyprogramsity.utils.TextUtils;
 
 import java.time.LocalDate;
 import java.util.Objects;
 
 public class Calendar extends FeedModel {
+    public static final Calendar NOT_FOUND = new Calendar();
 
     private String serviceId;
     private boolean isMonday;
@@ -35,7 +37,7 @@ public class Calendar extends FeedModel {
                     LocalDate startDate,
                     LocalDate endDate) {
 
-        super(TextUtils.EMPTY_STRING);
+        super(CreateID.createId());
         this.serviceId = service_id;
         this.isMonday = isMonday;
         this.isTuesday = isTuesday;

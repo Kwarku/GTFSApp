@@ -3,6 +3,7 @@ package pl.narodzinyprogramsity.parsers;
 import pl.narodzinyprogramsity.exceptions.NotCorrectLineException;
 import pl.narodzinyprogramsity.modelType.TransferType;
 import pl.narodzinyprogramsity.models.Transfer;
+import pl.narodzinyprogramsity.utils.CreateID;
 
 public class TransferParser extends BaseFeedParser<Transfer> {
 
@@ -25,9 +26,7 @@ public class TransferParser extends BaseFeedParser<Transfer> {
         Transfer transfer = new Transfer();
         transfer.setFromStopId(splitFeedInfo[FROM_STOP_ID_COLUMN]);
         transfer.setToStopId(splitFeedInfo[TO_STOP_ID_COLUMN]);
-
         transfer.setTransferType(getTransferType());
-
         transfer.setMinTransferTime(splitFeedInfo[MINIMAL_TRANSFER_TIME_COLUMN]);
 
         return transfer;

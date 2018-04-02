@@ -2,6 +2,7 @@ package pl.narodzinyprogramsity.parsers;
 
 import pl.narodzinyprogramsity.exceptions.NotCorrectLineException;
 import pl.narodzinyprogramsity.models.CalendarData;
+import pl.narodzinyprogramsity.utils.CreateID;
 import pl.narodzinyprogramsity.utils.ParseStringInToBoolean;
 import pl.narodzinyprogramsity.utils.ParseStringToLocalData;
 
@@ -23,7 +24,6 @@ public class CalendarDataParser extends BaseFeedParser<CalendarData> {
     public CalendarData parseTo(String line) throws NotCorrectLineException {
         super.parseTo(line);
         CalendarData calendarData = new CalendarData();
-
         calendarData.setServiceId(splitFeedInfo[SERVICE_ID_COLUMN]);
         calendarData.setData(ParseStringToLocalData.parse(splitFeedInfo[DATA_COLUMN]));
         calendarData.setDataAvailable(ParseStringInToBoolean.parse(splitFeedInfo[DATA_AVAILABLE_COLUMN]));

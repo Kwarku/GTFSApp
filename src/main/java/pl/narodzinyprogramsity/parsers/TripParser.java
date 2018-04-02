@@ -5,9 +5,9 @@ import pl.narodzinyprogramsity.models.Trip;
 
 public class TripParser extends BaseFeedParser<Trip> {
 
-    private static final int TRIP_ID = 2;
     private static final int ROUTE_ID = 0;
     private static final int SERVICE_ID = 1;
+    private static final int TRIP_ID = 2;
     private static final int TRIP_HEAD_SIGN = 3;
     private static final int DIRECTION_ID = 4;
     private static final int BLOCK_ID = 5;

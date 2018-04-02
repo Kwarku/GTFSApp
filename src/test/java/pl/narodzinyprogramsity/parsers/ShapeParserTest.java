@@ -19,7 +19,7 @@ public class ShapeParserTest {
 
     @Before
     public void setUp() {
-        testShape = CreateShape.createTestShape();
+        testShape = CreateShape.createOriginalShape();
         parser = new ShapeParser();
     }
 

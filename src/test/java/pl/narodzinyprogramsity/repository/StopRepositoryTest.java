@@ -85,10 +85,20 @@ public class StopRepositoryTest {
 
     @Test
     public void updateTest() {
-        testRepository.update(new Stop(), testStop);
+        testStop.setStopName("test");
+        Stop testUpdateStop = testStop;
 
-        Stop stop = testRepository.get(testStop.getId());
-        assertThat(stop).isNotEqualTo(new Stop()).isEqualTo(testStop).isNotNull();
+        testRepository.update(new Stop(), testUpdateStop);
+
+        Stop stop = testRepository.get(testUpdateStop.getId());
+        assertThat(stop).isNotEqualTo(new Stop()).isEqualTo(testUpdateStop);
+    }
+
+    @Test
+    public void updateByNullObjTest() {
+        thrown.expect(NullPointerException.class);
+
+        repository.update(new Stop(), null);
     }
 
     @Test
