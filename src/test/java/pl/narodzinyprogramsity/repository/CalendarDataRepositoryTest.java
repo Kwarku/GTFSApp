@@ -75,7 +75,6 @@ public class CalendarDataRepositoryTest {
         assertThat(calendarData).isNotNull().isEqualTo(CalendarData.NOT_FOUND);
     }
 
-    //fixme what sens this test have? If string is null than throw nullPointerException. If use null string than application die.
     @Test
     public void getByNullIDTest() {
         thrown.expect(NullPointerException.class);

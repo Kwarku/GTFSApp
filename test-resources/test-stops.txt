@@ -1,11 +1,11 @@
 "stop_id","stop_code","stop_name","stop_desc","stop_lat","stop_lon","stop_url","location_type","parent_station","wheelchair_boarding"
 1271,"1271","Kołłątaja 11-15","",53.443798,14.548237,"http://www.zditm.szczecin.pl/rozklady/",1,,
-10111,"10111","Turzyn Dworzec 11","",53.428414,14.527251,"http://www.zditm.szczecin.pl/s10111",,,
-10112,"10112","Turzyn Dworzec 12","",53.427956,14.529595,"http://www.zditm.szczecin.pl/s10112",,,
-10211,"10211","Turzyn 11","",53.429218,14.531897,"http://www.zditm.szczecin.pl/s10211",,,
-10212,"10212","Turzyn 12","",53.428561,14.531929,"http://www.zditm.szczecin.pl/s10212",,,1
-10221,"10221","Turzyn 21","",53.427908,14.532659,"http://www.zditm.szczecin.pl/s10221",,,
-10311,"10311","Bolesława Śmiałego 11","",53.427642,14.535148,"http://www.zditm.szczecin.pl/s10311",,,
 10412,"10412","Plac Kościuszki 12","",53.427574,14.537168,"http://www.zditm.szczecin.pl/s10412",,,1
-10421,"10421","Plac Kościuszki 21","",53.427121,14.537776,"http://www.zditm.szczecin.pl/s10421",,,
-10422,"10422","Plac Kościuszki 22","",53.426930,14.538023,"http://www.zditm.szczecin.pl/s10422",,,
+10721,"10721","Plac Zwycięstwa 21","",53.425293,14.547416,"http://www.zditm.szczecin.pl/s10721",,,
+10914,"10914","Wyszyńskiego 14","",53.423086,14.558878,"http://www.zditm.szczecin.pl/s10914",,,
+11321,"11321","Plac Żołnierza Polskiego 21","",53.428710,14.553832,"http://www.zditm.szczecin.pl/s11321",,,
+11525,"11525","Plac Rodła 25","",53.431363,14.556530,"http://www.zditm.szczecin.pl/s11525",,,
+20151,"20151","Gumieńce 51","",53.424492,14.490830,"http://www.zditm.szczecin.pl/s20151",,,
+43911,"43911","Grochowa 11","",53.469161,14.590149,"http://www.zditm.szczecin.pl/s43911",,,
+47812,"47812","Pod Urwiskiem nż 12","na żądanie",53.478389,14.509946,"http://www.zditm.szczecin.pl/s47812",,,
+11412,"11412","Filharmonia 12","",53.430321,14.557485,"http://www.zditm.szczecin.pl/s11412",,,
