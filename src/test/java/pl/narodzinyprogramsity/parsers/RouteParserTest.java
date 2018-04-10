@@ -20,7 +20,7 @@ public class RouteParserTest {
     @Before
     public void setUp() {
         routeParser = new RouteParser();
-        testRoute = CreateRoute.getTestRoute();
+        testRoute = CreateRoute.getOriginalRoute();
     }
 
 

@@ -20,7 +20,7 @@ public class TripParserTest {
     @Before
     public void setUp() {
         tripParser = new TripParser();
-        testTrip = CreteTrip.getTestTrip();
+        testTrip = CreteTrip.getOriginalTrip();
     }
 
     @Test
