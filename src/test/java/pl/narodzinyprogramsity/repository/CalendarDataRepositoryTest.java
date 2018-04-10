@@ -1,5 +1,6 @@
 package pl.narodzinyprogramsity.repository;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -41,6 +42,10 @@ public class CalendarDataRepositoryTest {
         testRepository.list.add(data3);
 
         result = new ArrayList<>();
+    }
+
+    @After
+    public void tearDown() {
         result.clear();
     }
 
