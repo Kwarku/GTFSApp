@@ -2,23 +2,45 @@ package pl.narodzinyprogramsity.models;
 
 import pl.narodzinyprogramsity.utils.TextUtils;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.Objects;
 
-public class Trip extends FeedModel{
+@Entity
+@Table(name = "Trip")
+public class Trip extends FeedModel {
+    public static final String TABLE_NAME = "Trip";
     public static Trip NOT_FOUND = new Trip();
 
-   private String routeId;
-   private String serviceId;
-   private String tripHeadSign;
-   private String directionId;
-   private String blockId;
-   private int shapeId;
-   private boolean wheelchairAccessible;
-   private boolean lowFloor;
+    @Column(name = "route_id")
+    private String routeId;
 
-   public Trip(){
-       super(TextUtils.EMPTY_STRING);
-   }
+    @Column(name = "service_id")
+    private String serviceId;
+
+    @Column(name = "trip_head_sign")
+    private String tripHeadSign;
+
+    @Column(name = "direction_id")
+    private String directionId;
+
+    @Column(name = "blok_id")
+    private String blockId;
+
+    @Column(name = "shape_id")
+    private int shapeId;
+
+    @Column(name = "is_wheelchair_accessible")
+    private boolean wheelchairAccessible;
+
+    @Column(name = "is_low_floor")
+    private boolean lowFloor;
+
+
+    public Trip() {
+        super(TextUtils.EMPTY_STRING);
+    }
 
     public Trip(String routeId,
                 String serviceId,
