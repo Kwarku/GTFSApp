@@ -3,22 +3,46 @@ package pl.narodzinyprogramsity.models;
 import pl.narodzinyprogramsity.utils.CreateID;
 import pl.narodzinyprogramsity.utils.TextUtils;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.time.LocalDate;
 import java.util.Objects;
 
+@Entity
+@Table(name = "Calendar")
 public class Calendar extends FeedModel {
+    public static final String TABLE_NAME = "Calendar";
     public static final Calendar NOT_FOUND = new Calendar();
 
+    @Column(name = "service_id")
     private String serviceId;
+
+    @Column(name = "is_monday")
     private boolean isMonday;
+
+    @Column(name = "is_tuesday")
     private boolean isTuesday;
+
+    @Column(name = "is_wednesday")
     private boolean isWednesday;
+
+    @Column(name = "is_thursday")
     private boolean isThursday;
+
+    @Column(name = "is_friday")
     private boolean isFriday;
+
+    @Column(name = "is_saturday")
     private boolean isSaturday;
+
+    @Column(name = "is_sunday")
     private boolean isSunday;
 
+    @Column(name = "start_Date")
     private LocalDate startDate;
+
+    @Column(name = "end_date")
     private LocalDate endDate;
 
     public Calendar() {

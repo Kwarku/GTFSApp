@@ -14,6 +14,6 @@
 
         <!-- mapping -->
         <mapping class="pl.narodzinyprogramsity.models.Agency"/>
-        <!--<mapping class="pl.narodzinyprograsmity.model.Book"/>-->
+        <mapping class="pl.narodzinyprogramsity.models.Calendar"/>
     </session-factory>
 </hibernate-configuration>
