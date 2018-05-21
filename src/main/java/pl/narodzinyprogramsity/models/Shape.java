@@ -2,12 +2,24 @@ package pl.narodzinyprogramsity.models;
 
 import pl.narodzinyprogramsity.utils.TextUtils;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.Objects;
 
+@Entity
+@Table(name = "Shape")
 public class Shape extends FeedModel {
+    public static final String TABLE_NAME = "Shape";
     public static final Shape NOT_FOUND = new Shape();
+
+    @Column(name = "pt_lat")
     private String shapePtLat;
+
+    @Column(name = "pt_lon")
     private String shapePtLon;
+
+    @Column(name = "pt_sequence")
     private String shapePtSequence;
 
 

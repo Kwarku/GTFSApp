@@ -16,5 +16,6 @@
         <mapping class="pl.narodzinyprogramsity.models.Agency"/>
         <mapping class="pl.narodzinyprogramsity.models.Calendar"/>
         <mapping class="pl.narodzinyprogramsity.models.CalendarData"/>
+        <mapping class="pl.narodzinyprogramsity.models.Shape"/>
     </session-factory>
 </hibernate-configuration>
