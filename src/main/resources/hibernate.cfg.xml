@@ -13,7 +13,7 @@
         <property name="show_sql">true</property>
 
         <!-- mapping -->
-        <!--<mapping class="pl.narodzinyprograsmity.model.Author"/>-->
+        <mapping class="pl.narodzinyprogramsity.models.Agency"/>
         <!--<mapping class="pl.narodzinyprograsmity.model.Book"/>-->
     </session-factory>
 </hibernate-configuration>

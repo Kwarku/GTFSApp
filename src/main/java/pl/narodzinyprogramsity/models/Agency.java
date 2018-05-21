@@ -2,15 +2,27 @@ package pl.narodzinyprogramsity.models;
 
 import pl.narodzinyprogramsity.utils.TextUtils;
 
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
+@Table(name = "Agency")
 public class Agency extends FeedModel {
     public static Agency NOT_FOUND = new Agency();
 
+    @Column(name = "name")
     private String agencyName;
+
+    @Column(name = "ULR")
     private String agencyUrl;
+
+    @Column(name = "time_zone")
     private String agencyTimezone;
+
+    @Column(name = "lang")
     private String agencyLang;
+
+    @Column(name = "phone_number")
     private String agencyPhone;
 
     public Agency() { super(TextUtils.EMPTY_STRING);}
