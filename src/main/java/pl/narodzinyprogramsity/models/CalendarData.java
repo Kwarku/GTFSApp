@@ -3,13 +3,25 @@ package pl.narodzinyprogramsity.models;
 import pl.narodzinyprogramsity.utils.CreateID;
 import pl.narodzinyprogramsity.utils.TextUtils;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.time.LocalDate;
 import java.util.Objects;
 
+@Entity
+@Table
 public class CalendarData extends FeedModel {
     public static final CalendarData NOT_FOUND = new CalendarData();
+    public static final String TABLE_NAME = "CalenarData";
+
+    @Column(name = "service_id")
     private String serviceId;
+
+    @Column(name = "data")
     private LocalDate data;
+
+    @Column(name = "is_data_available")
     private boolean isDataAvailable;
 
     public CalendarData() {
