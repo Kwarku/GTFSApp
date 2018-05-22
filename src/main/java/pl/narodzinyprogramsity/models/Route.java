@@ -21,6 +21,7 @@ public class Route extends FeedModel {
     @Column(name = "route_desc")
     private String routeDesc;
 
+    @Column(name = "route_type")
     private RoutType routeType;
 
     @Column(name = "route_url")

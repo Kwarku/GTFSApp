@@ -4,19 +4,43 @@ import pl.narodzinyprogramsity.modelType.LocationType;
 import pl.narodzinyprogramsity.modelType.WheelchairBoardingType;
 import pl.narodzinyprogramsity.utils.TextUtils;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Enumerated;
+import javax.persistence.Table;
 import java.util.Objects;
 
+@Entity
+@Table(name = "Stop")
 public class Stop extends FeedModel {
+    public static final String TABLE_NAME = "Stop";
     public static final Stop NOT_FOUND = new Stop();
 
+    @Column(name = "stop_code")
     private String stopCode;
+
+    @Column(name = "stop_name")
     private String stopName;
+
+    @Column(name = "stop_desc")
     private String stopDesc;
+
+    @Column(name = "stop_lat")
     private String stopLat;
+
+    @Column(name = "stop_lon")
     private String stopLon;
+
+    @Column(name = "stop_utl")
     private String stopUrl;
+
+    @Column(name = "location_type")
     private LocationType locationType;
+
+    @Column(name = "stop_parent_station")
     private String parentStation;
+
+    @Column(name = "wheelchair_boarding_type")
     private WheelchairBoardingType wheelchairBoardingType;
 
     public Stop(){
@@ -95,6 +119,7 @@ public class Stop extends FeedModel {
         this.stopUrl = stopUrl;
     }
 
+    @Enumerated
     public LocationType getLocationType() {
         return locationType;
     }
@@ -111,6 +136,7 @@ public class Stop extends FeedModel {
         this.parentStation = parentStation;
     }
 
+    @Enumerated
     public WheelchairBoardingType getWheelchairBoardingType() {
         return wheelchairBoardingType;
     }
