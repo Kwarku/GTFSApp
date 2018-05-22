@@ -5,22 +5,44 @@ import pl.narodzinyprogramsity.modelType.PickupType;
 import pl.narodzinyprogramsity.utils.CreateID;
 import pl.narodzinyprogramsity.utils.TextUtils;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Enumerated;
+import javax.persistence.Table;
 import java.time.LocalTime;
 import java.util.Objects;
 
+@Entity
+@Table(name = "Stop_time")
 public class StopTime extends FeedModel {
+    public static final String TABLE_NAME = "StopTime";
     public static final StopTime NOT_FOUND = new StopTime();
 
+    @Column(name = "trip_id")
     private String tripId;
+
+    @Column(name = "arrival_time")
     private LocalTime arrivalTime;
+
+    @Column(name = "departure_time")
     private LocalTime departureTime;
+
+    @Column(name = "stop_id")
     private String stopId;
+
+    @Column(name = "stop_sequence")
     private String stopSequence;
+
+    @Column(name = "stop_headsign")
     private String stopHeadsign;
+
+    @Column(name = "pickup_type")
     private PickupType pickupType;
+
+    @Column(name = "drop_off_type")
     private DropOffType dropOffType;
 
-    public StopTime(){
+    public StopTime() {
         super(TextUtils.EMPTY_STRING);
     }
 
@@ -92,6 +114,7 @@ public class StopTime extends FeedModel {
         this.stopHeadsign = stopHeadsign;
     }
 
+    @Enumerated
     public PickupType getPickupType() {
         return pickupType;
     }
@@ -100,6 +123,7 @@ public class StopTime extends FeedModel {
         this.pickupType = pickupType;
     }
 
+    @Enumerated
     public DropOffType getDropOffType() {
         return dropOffType;
     }
