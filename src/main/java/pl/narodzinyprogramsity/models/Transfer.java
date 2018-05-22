@@ -4,13 +4,27 @@ import pl.narodzinyprogramsity.modelType.TransferType;
 import pl.narodzinyprogramsity.utils.CreateID;
 import pl.narodzinyprogramsity.utils.TextUtils;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Enumerated;
+import javax.persistence.Table;
 import java.util.Objects;
-
+@Entity
+@Table(name = "Transfer")
 public class Transfer extends FeedModel {
+    public static final String TABLE_NAME = "Transfer";
     public static final Transfer NOT_FOUND = new Transfer();
+
+    @Column(name = "from_stop_id")
     private String fromStopId;
+
+    @Column(name = "to_stop_id")
     private String toStopId;
+
+    @Column(name = "transfer_type")
     private TransferType transferType;
+
+    @Column(name = "min_transfer_time")
     private String minTransferTime;
 
     public Transfer(){
@@ -45,6 +59,7 @@ public class Transfer extends FeedModel {
         this.toStopId = toStopId;
     }
 
+    @Enumerated
     public TransferType getTransferType() {
         return transferType;
     }

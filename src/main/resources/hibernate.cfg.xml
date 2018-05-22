@@ -21,6 +21,7 @@
         <mapping class="pl.narodzinyprogramsity.models.Shape"/>
         <mapping class="pl.narodzinyprogramsity.models.Stop"/>
         <mapping class="pl.narodzinyprogramsity.models.StopTime"/>
+        <mapping class="pl.narodzinyprogramsity.models.Transfer"/>
         <mapping class="pl.narodzinyprogramsity.models.Trip"/>
     </session-factory>
 </hibernate-configuration>
