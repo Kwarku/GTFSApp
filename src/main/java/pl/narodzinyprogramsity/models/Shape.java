@@ -2,14 +2,14 @@ package pl.narodzinyprogramsity.models;
 
 import pl.narodzinyprogramsity.utils.TextUtils;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 @Table(name = "Shape")
+@AttributeOverrides({ @AttributeOverride(name = "id", column = @Column(name = "shape_id")) })
 public class Shape extends FeedModel {
+
     public static final String TABLE_NAME = "Shape";
     public static final Shape NOT_FOUND = new Shape();
 

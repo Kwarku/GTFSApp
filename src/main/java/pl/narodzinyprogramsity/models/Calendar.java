@@ -3,15 +3,15 @@ package pl.narodzinyprogramsity.models;
 import pl.narodzinyprogramsity.utils.CreateID;
 import pl.narodzinyprogramsity.utils.TextUtils;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Objects;
 
 @Entity
 @Table(name = "Calendar")
+@AttributeOverrides({ @AttributeOverride(name = "id", column = @Column(name = "calendar_id")) })
 public class Calendar extends FeedModel {
+
     public static final String TABLE_NAME = "Calendar";
     public static final Calendar NOT_FOUND = new Calendar();
 

@@ -4,10 +4,7 @@ import pl.narodzinyprogramsity.modelType.TransferType;
 import pl.narodzinyprogramsity.utils.CreateID;
 import pl.narodzinyprogramsity.utils.TextUtils;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Enumerated;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Objects;
 @Entity
 @Table(name = "Transfer")

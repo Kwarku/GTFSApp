@@ -5,16 +5,15 @@ import pl.narodzinyprogramsity.modelType.PickupType;
 import pl.narodzinyprogramsity.utils.CreateID;
 import pl.narodzinyprogramsity.utils.TextUtils;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Enumerated;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalTime;
 import java.util.Objects;
 
 @Entity
 @Table(name = "Stop_time")
+@AttributeOverrides({ @AttributeOverride(name = "id", column = @Column(name = "stop_time_id")) })
 public class StopTime extends FeedModel {
+
     public static final String TABLE_NAME = "StopTime";
     public static final StopTime NOT_FOUND = new StopTime();
 

@@ -2,14 +2,14 @@ package pl.narodzinyprogramsity.models;
 
 import pl.narodzinyprogramsity.utils.TextUtils;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 @Table(name = "Trip")
+@AttributeOverrides({ @AttributeOverride(name = "id", column = @Column(name = "trip_id")) })
 public class Trip extends FeedModel {
+
     public static final String TABLE_NAME = "Trip";
     public static Trip NOT_FOUND = new Trip();
 

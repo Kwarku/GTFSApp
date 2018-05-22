@@ -7,6 +7,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "Agency")
+@AttributeOverrides({ @AttributeOverride(name = "id", column = @Column(name = "agency_id")) })
 public class Agency extends FeedModel {
     public static final String TABLE_NAME = "Agency";
     public static Agency NOT_FOUND = new Agency();

@@ -8,7 +8,9 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "Route")
+@AttributeOverrides({ @AttributeOverride(name = "id", column = @Column(name = "route_id")) })
 public class Route extends FeedModel {
+
     public static final String TABLE_NAME = "Route";
     public static Route NOT_FOUND = new Route();
 

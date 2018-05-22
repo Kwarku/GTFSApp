@@ -4,15 +4,14 @@ import pl.narodzinyprogramsity.modelType.LocationType;
 import pl.narodzinyprogramsity.modelType.WheelchairBoardingType;
 import pl.narodzinyprogramsity.utils.TextUtils;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Enumerated;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 @Table(name = "Stop")
+@AttributeOverrides({ @AttributeOverride(name = "id", column = @Column(name = "stop_id")) })
 public class Stop extends FeedModel {
+
     public static final String TABLE_NAME = "Stop";
     public static final Stop NOT_FOUND = new Stop();
 
