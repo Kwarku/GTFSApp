@@ -17,7 +17,7 @@ public enum RoutType {
         this.type = type;
     }
 
-    public static RoutType getType(int types){
+    public static RoutType getRouteType(int types){
         for (RoutType rout : RoutType.values()) {
             if (rout.type == types) {
                 return rout;

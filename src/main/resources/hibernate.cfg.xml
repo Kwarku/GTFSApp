@@ -5,6 +5,7 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hbm2ddl.auto">update</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
         <property name="connection.url">jdbc:mysql://localhost/GTFSHibernate</property>
         <property name="connection.username">root</property>
@@ -16,6 +17,7 @@
         <mapping class="pl.narodzinyprogramsity.models.Agency"/>
         <mapping class="pl.narodzinyprogramsity.models.Calendar"/>
         <mapping class="pl.narodzinyprogramsity.models.CalendarData"/>
+        <mapping class="pl.narodzinyprogramsity.models.Route"/>
         <mapping class="pl.narodzinyprogramsity.models.Shape"/>
         <mapping class="pl.narodzinyprogramsity.models.Trip"/>
     </session-factory>

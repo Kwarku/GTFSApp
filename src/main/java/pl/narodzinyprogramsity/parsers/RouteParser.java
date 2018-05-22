@@ -40,7 +40,7 @@ public class RouteParser extends BaseFeedParser<Route> {
         if (splitFeedInfo[ROUTE_TYPE].equals("")) {
             route.setRouteType(RoutType.UNKNOWN);
         } else {
-            route.setRouteType(RoutType.getType(Integer.parseInt(splitFeedInfo[ROUTE_TYPE])));
+            route.setRouteType(RoutType.getRouteType(Integer.parseInt(splitFeedInfo[ROUTE_TYPE])));
         }
     }
 }

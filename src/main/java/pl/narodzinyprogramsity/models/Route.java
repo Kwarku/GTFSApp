@@ -3,17 +3,33 @@ package pl.narodzinyprogramsity.models;
 import pl.narodzinyprogramsity.modelType.RoutType;
 import pl.narodzinyprogramsity.utils.TextUtils;
 
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
+@Table(name = "Route")
 public class Route extends FeedModel {
+    public static final String TABLE_NAME = "Route";
     public static Route NOT_FOUND = new Route();
 
+    @Column(name = "route_short_name")
     private String routeShortName;
+
+    @Column(name = "route_long_name")
     private String routeLongName;
+
+    @Column(name = "route_desc")
     private String routeDesc;
+
     private RoutType routeType;
+
+    @Column(name = "route_url")
     private String routeUrl;
+
+    @Column(name = "route_color")
     private String routeColor;
+
+    @Column(name = "route_text_color")
     private String routeTextColor;
 
     public Route(String routeId,
@@ -64,6 +80,7 @@ public class Route extends FeedModel {
         this.routeDesc = routeDesc;
     }
 
+    @Enumerated()
     public RoutType getRouteType() {
         return routeType;
     }

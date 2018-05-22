@@ -10,7 +10,7 @@ public class CreateRoute {
                 "1",
                 "Głębokie - Potulicka",
                 "",
-                RoutType.getType(0),
+                RoutType.getRouteType(0),
                 "http://www.zditm.szczecin.pl/rozklady/index.html",
                 "",
                 "");
@@ -21,7 +21,7 @@ public class CreateRoute {
                 "testShortName1",
                 "testLongName1",
                 "testDesc1",
-                RoutType.getType(1),
+                RoutType.getRouteType(1),
                 "testURL1",
                 "testColor1",
                 "TestTextColor1");
@@ -32,7 +32,7 @@ public class CreateRoute {
                 "testShortName2",
                 "testLongName2",
                 "testDesc2",
-                RoutType.getType(2),
+                RoutType.getRouteType(2),
                 "testURL2",
                 "testColor2",
                 "TestTextColor2");
@@ -43,7 +43,7 @@ public class CreateRoute {
                 "testShortName3",
                 "testLongName3",
                 "testDesc3",
-                RoutType.getType(3),
+                RoutType.getRouteType(3),
                 "testURL3",
                 "testColor3",
                 "TestTextColor3");
@@ -54,7 +54,7 @@ public class CreateRoute {
                 "testShortName4",
                 "testLongName4",
                 "testDesc4",
-                RoutType.getType(4),
+                RoutType.getRouteType(4),
                 "testURL4",
                 "testColor14",
                 "TestTextColor4");
