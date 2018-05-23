@@ -1,0 +1,11 @@
+"route_id","route_short_name","route_long_name","route_desc","route_type","route_url","route_color","route_text_color"
+"1","1","Głębokie - Potulicka",,0,"http://www.zditm.szczecin.pl/rozklady/index.html",,
+"2","2","Dworzec Niebuszewo - Turkusowa",,0,"http://www.zditm.szczecin.pl/rozklady/index.html",,
+"3","3","Las Arkoński - Pomorzany",,0,"http://www.zditm.szczecin.pl/rozklady/index.html",,
+"4","4","Krzekowo - Pomorzany",,0,"http://www.zditm.szczecin.pl/rozklady/index.html",,
+"5","5","Krzekowo - Stocznia Szczecińska",,0,"http://www.zditm.szczecin.pl/rozklady/index.html",,
+"6","6","Gocław - Pomorzany",,0,"http://www.zditm.szczecin.pl/rozklady/index.html",,
+"7","7","Krzekowo - Turkusowa",,0,"http://www.zditm.szczecin.pl/rozklady/index.html",,
+"8","8","Gumieńce - Turkusowa",,0,"http://www.zditm.szczecin.pl/rozklady/index.html",,
+"9","9","Głębokie - Potulicka",,0,"http://www.zditm.szczecin.pl/rozklady/index.html",,
+"10","10","Gumieńce - Las Arkoński",,0,"http://www.zditm.szczecin.pl/rozklady/index.html",,

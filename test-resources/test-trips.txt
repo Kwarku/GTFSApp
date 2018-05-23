@@ -1,0 +1,11 @@
+"route_id","service_id","trip_id","trip_headsign","direction_id","block_id","shape_id","wheelchair_accessible","low_floor"
+"A","POW","A-7549-POW-1-1-0","Plac Rodła","0","A/1",665,0,1
+"A","POW","A-7549-POW-1-2-0","Osiedle Bukowe","1","A/1",666,0,1
+"A","POW","A-7549-POW-1-3-0","Plac Rodła","0","A/1",665,0,1
+"A","POW","A-7549-POW-1-4-0","Osiedle Bukowe","1","A/1",666,0,1
+"A","POW","A-7549-POW-1-5-0","Plac Rodła","0","A/1",665,0,1
+"A","POW","A-7549-POW-1-6-0","Osiedle Bukowe","1","A/1",666,0,1
+"A","POW","A-7549-POW-1-7-0","Plac Rodła","0","A/1",665,0,1
+"A","POW","A-7549-POW-1-8-0","Osiedle Bukowe","1","A/1",666,0,1
+"A","POW","A-7549-POW-1-9-0","Plac Rodła","0","A/1",665,0,1
+"A","POW","A-7549-POW-1-10-0","Osiedle Bukowe","1","A/1",666,0,1

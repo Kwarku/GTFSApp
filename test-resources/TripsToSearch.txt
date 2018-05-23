@@ -1,0 +1,33 @@
+"route_id","service_id","trip_id","trip_headsign","direction_id","block_id","shape_id","wheelchair_accessible","low_floor"
+"A","POW","A-7549-POW-1-1-0","Plac Rodła","0","A/1",665,0,1
+"A","POW","A-7549-POW-1-2-0","Osiedle Bukowe","1","A/1",666,0,1
+"A","POW","A-7549-POW-1-14-0","Osiedle Bukowe","1","A/1",666,0,1
+"A","POW","A-7549-POW-1-3-0","Plac Rodła","0","A/1",665,0,1
+"C","SOBND","C-7588-SOBND-2-18-0","Osiedle Kasztanowe","0","C/2",679,0,1
+"C","SOBND","C-7588-SOBND-3-1-0","Plac Rodła","1","C/3",680,0,1
+"C","SOBND","C-7588-SOBND-3-2-0","Osiedle Kasztanowe","0","C/3",679,0,1
+"C","SOBND","C-7588-SOBND-3-3-0","Plac Rodła","1","C/3",680,0,1
+"H","POWND","H-7561-POWND-2-17-0","Dąbie Osiedle","0","H/2",697,0,0
+"H","POWND","H-7561-POWND-2-18-0","Plac Rodła","1","H/2",698,0,0
+"H","POWND","H-7561-POWND-2-19-0","Dąbie Osiedle","0","H/2",697,0,0
+"H","POWND","H-7561-POWND-2-20-0","Plac Rodła","1","H/2",698,0,0
+"1","POW","1-6493-POW-1-1-0","Potulicka","0","1/1",3,0,0
+"1","POW","1-6493-POW-1-2-0","Głębokie","1","1/1",4,0,0
+"1","POW","1-6493-POW-1-3-0","Potulicka","0","1/1",3,0,0
+"1","POW","1-6493-POW-1-4-0","Głębokie","1","1/1",4,0,0
+"3","BN","3-5492-BN-4-13-0","Las Arkoński","1","3/4",29,2,0
+"3","BN","3-5492-BN-4-14-0","Pomorzany","0","3/4",28,2,0
+"3","BN","3-5492-BN-4-15-0","Las Arkoński","1","3/4",29,2,0
+"3","BN","3-5492-BN-4-16-0","Pomorzany","0","3/4",28,2,0
+"4","POWZ","4-6461-POWZ-1-1-0","Krzekowo","1","4/1",63,2,0
+"4","POWZ","4-6461-POWZ-1-2-0","Pomorzany","0","4/1",64,2,0
+"4","POWZ","4-6461-POWZ-1-3-0","Krzekowo","1","4/1",63,2,0
+"4","POWZ","4-6461-POWZ-1-4-0","Pomorzany","0","4/1",64,2,0
+"7","BN","7-6307-BN-12-3-0","Krzekowo","1","2/12",114,0,1
+"7","BN","7-6307-BN-12-4-0","Turkusowa","0","2/12",113,0,1
+"7","BN","7-6307-BN-12-5-0","Krzekowo","1","2/12",114,0,1
+"7","BN","7-6307-BN-12-6-0","Turkusowa","0","2/12",113,0,1
+"8","POWZ","8-6320-POWZ-1-0-1","Dworcowa","0","8/1",122,0,1
+"8","POWZ","8-6320-POWZ-1-3-0","Gumieńce","1","8/1",129,0,1
+"8","POWZ","8-6320-POWZ-1-4-0","Turkusowa","0","8/1",128,0,1
+"8","POWZ","8-6320-POWZ-1-5-0","Gumieńce","1","8/1",129,0,1
