@@ -7,7 +7,7 @@ import org.junit.rules.ExpectedException;
 import pl.narodzinyprogramsity.exceptions.NotCorrectLineException;
 import pl.narodzinyprogramsity.modelType.TransferType;
 import pl.narodzinyprogramsity.models.Transfer;
-import pl.narodzinyprogramsity.utils.CreateTransfer;
+//import pl.narodzinyprogramsity.utils.CreateTransfer;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -21,7 +21,7 @@ public class TransferParserTest {
 
     @Before
     public void setUp() {
-        testTransfer = CreateTransfer.createOriginalTransfer();
+//        testTransfer = CreateTransfer.createOriginalTransfer();
         parser = new TransferParser();
     }
 
@@ -46,8 +46,8 @@ public class TransferParserTest {
         Transfer transfer = parser.parseTo(",,,");
 
         assertThat(transfer).isNotNull().isNotEqualTo(testTransfer);
-        assertThat(transfer.getFromStopId()).isBlank();
-        assertThat(transfer.getToStopId()).isBlank();
+//        assertThat(transfer.getFromStopIdList()).isBlank();
+//        assertThat(transfer.getToStopIdList()).isBlank();
         assertThat(transfer.getMinTransferTime()).isBlank();
         assertThat(transfer.getTransferType()).isEqualByComparingTo(TransferType.RECOMMENDED);
     }

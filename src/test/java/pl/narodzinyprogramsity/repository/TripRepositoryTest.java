@@ -6,7 +6,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import pl.narodzinyprogramsity.models.Trip;
-import pl.narodzinyprogramsity.utils.CreteTrip;
+//import pl.narodzinyprogramsity.utils.CreteTrip;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -34,11 +34,11 @@ public class TripRepositoryTest {
 
     @Before
     public void setUp() {
-        testTrip = CreteTrip.getOriginalTrip();
-        trip1 = CreteTrip.testTrip1();
-        trip2 = CreteTrip.testTrip2();
-        trip3 = CreteTrip.testTrip3();
-        noAddToRepositoryTrip = CreteTrip.testTrip4();
+//        testTrip = CreteTrip.getOriginalTrip();
+//        trip1 = CreteTrip.testTrip1();
+//        trip2 = CreteTrip.testTrip2();
+//        trip3 = CreteTrip.testTrip3();
+//        noAddToRepositoryTrip = CreteTrip.testTrip4();
 
         emptyRepository = new TripRepository();
         testRepository = new TripRepository();

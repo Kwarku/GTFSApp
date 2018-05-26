@@ -6,7 +6,7 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import pl.narodzinyprogramsity.exceptions.NotCorrectLineException;
 import pl.narodzinyprogramsity.models.StopTime;
-import pl.narodzinyprogramsity.utils.CreateStopTime;
+//import pl.narodzinyprogramsity.utils.CreateStopTime;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -19,7 +19,7 @@ public class StopTimeParserTest {
 
     @Before
     public void setUp() {
-        testStopTime = CreateStopTime.createOriginalStopTime();
+//        testStopTime = CreateStopTime.createOriginalStopTime();
         parser = new StopTimeParser();
     }
 

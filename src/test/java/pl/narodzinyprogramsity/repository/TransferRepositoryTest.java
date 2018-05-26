@@ -6,7 +6,7 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.mockito.internal.matchers.Null;
 import pl.narodzinyprogramsity.models.Transfer;
-import pl.narodzinyprogramsity.utils.CreateTransfer;
+//import pl.narodzinyprogramsity.utils.CreateTransfer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,10 +32,10 @@ public class TransferRepositoryTest {
 
     @Before
     public void setUp() {
-        tr1 = CreateTransfer.createTestTransfer1();
-        tr2 = CreateTransfer.createTestTransfer2();
-        tr3 = CreateTransfer.createTestTransfer3();
-        testTransfer = CreateTransfer.createOriginalTransfer();
+//        tr1 = CreateTransfer.createTestTransfer1();
+//        tr2 = CreateTransfer.createTestTransfer2();
+//        tr3 = CreateTransfer.createTestTransfer3();
+//        testTransfer = CreateTransfer.createOriginalTransfer();
 
         emptyRepository = new TransferRepository();
         testRepository = new TransferRepository();
@@ -137,9 +137,9 @@ public class TransferRepositoryTest {
 
     @Test
     public void updateNoExistObjTest() {
-        Transfer noExistTransfer = CreateTransfer.createTestTransfer4();
+//        Transfer noExistTransfer = CreateTransfer.createTestTransfer4();
 
-        testRepository.update(noExistTransfer, testTransfer);
+//        testRepository.update(noExistTransfer, testTransfer);
         resultList = testRepository.getAll();
 
         assertThat(resultList.size()).isEqualTo(3);

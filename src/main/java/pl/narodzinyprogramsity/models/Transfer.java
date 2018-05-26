@@ -5,6 +5,7 @@ import pl.narodzinyprogramsity.utils.CreateID;
 import pl.narodzinyprogramsity.utils.TextUtils;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Objects;
 @Entity
 @Table(name = "Transfer")
@@ -12,11 +13,11 @@ public class Transfer extends FeedModel {
     public static final String TABLE_NAME = "Transfer";
     public static final Transfer NOT_FOUND = new Transfer();
 
-    @Column(name = "from_stop_id")
-    private String fromStopId;
+    @ManyToOne
+    private List<Stop> fromStopIdList;
 
-    @Column(name = "to_stop_id")
-    private String toStopId;
+    @ManyToOne
+    private List<Stop> toStopIdList;
 
     @Column(name = "transfer_type")
     private TransferType transferType;
@@ -28,32 +29,32 @@ public class Transfer extends FeedModel {
         super(TextUtils.EMPTY_STRING);
     }
 
-    public Transfer(String fromStopId,
-                    String toStopId,
+    public Transfer(List<Stop> fromStopIdList,
+                    List<Stop> toStopIdList,
                     TransferType transferType,
                     String minTransferTime) {
 
         super(CreateID.createId());
-        this.fromStopId = fromStopId;
-        this.toStopId = toStopId;
+        this.fromStopIdList = fromStopIdList;
+        this.toStopIdList = toStopIdList;
         this.transferType = transferType;
         this.minTransferTime = minTransferTime;
     }
 
-    public String getFromStopId() {
-        return fromStopId;
+    public List<Stop> getFromStopIdList() {
+        return fromStopIdList;
     }
 
-    public void setFromStopId(String fromStopId) {
-        this.fromStopId = fromStopId;
+    public void setFromStopIdList(List<Stop> fromStopIdList) {
+        this.fromStopIdList = fromStopIdList;
     }
 
-    public String getToStopId() {
-        return toStopId;
+    public List<Stop> getToStopIdList() {
+        return toStopIdList;
     }
 
-    public void setToStopId(String toStopId) {
-        this.toStopId = toStopId;
+    public void setToStopIdList(List<Stop> toStopIdList) {
+        this.toStopIdList = toStopIdList;
     }
 
     @Enumerated
@@ -78,8 +79,8 @@ public class Transfer extends FeedModel {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Transfer transfer = (Transfer) o;
-        return Objects.equals(fromStopId, transfer.fromStopId) &&
-                Objects.equals(toStopId, transfer.toStopId) &&
+        return Objects.equals(fromStopIdList, transfer.fromStopIdList) &&
+                Objects.equals(toStopIdList, transfer.toStopIdList) &&
                 transferType == transfer.transferType &&
                 Objects.equals(minTransferTime, transfer.minTransferTime);
     }
@@ -87,14 +88,14 @@ public class Transfer extends FeedModel {
     @Override
     public int hashCode() {
 
-        return Objects.hash(fromStopId, toStopId, transferType, minTransferTime);
+        return Objects.hash(fromStopIdList, toStopIdList, transferType, minTransferTime);
     }
 
     @Override
     public String toString() {
         return "Transfer{" +
-                "fromStopId='" + fromStopId + '\'' +
-                ", toStopId='" + toStopId + '\'' +
+                "fromStopIdList='" + fromStopIdList + '\'' +
+                ", toStopIdList='" + toStopIdList + '\'' +
                 ", transferType=" + transferType +
                 ", minTransferTime='" + minTransferTime + '\'' +
                 '}';

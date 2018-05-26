@@ -5,7 +5,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import pl.narodzinyprogramsity.models.StopTime;
-import pl.narodzinyprogramsity.utils.CreateStopTime;
+//import pl.narodzinyprogramsity.utils.CreateStopTime;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,10 +32,10 @@ public class StopTimeRepositoryTest {
 
     @Before
     public void setUp() {
-        st1 = CreateStopTime.createTestStopTime1();
-        st2 = CreateStopTime.createTestStopTime2();
-        st3 = CreateStopTime.createTestStopTime3();
-        testStopTime = CreateStopTime.createOriginalStopTime();
+//        st1 = CreateStopTime.createTestStopTime1();
+//        st2 = CreateStopTime.createTestStopTime2();
+//        st3 = CreateStopTime.createTestStopTime3();
+//        testStopTime = CreateStopTime.createOriginalStopTime();
 
         emptyRepository = new StopTimeRepository();
         testRepository = new StopTimeRepository();
@@ -188,7 +188,7 @@ public class StopTimeRepositoryTest {
     public void deleteNoExistObjByObjTest() {
         startListSize = testRepository.getAll().size();
 
-        testRepository.delete(CreateStopTime.createTestStopTime4());
+//        testRepository.delete(CreateStopTime.createTestStopTime4());
         endListSize = testRepository.getAll().size();
 
         assertThat(startListSize).isEqualTo(endListSize).isEqualTo(3);

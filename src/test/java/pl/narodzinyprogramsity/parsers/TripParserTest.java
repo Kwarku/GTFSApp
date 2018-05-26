@@ -6,7 +6,7 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import pl.narodzinyprogramsity.exceptions.NotCorrectLineException;
 import pl.narodzinyprogramsity.models.Trip;
-import pl.narodzinyprogramsity.utils.CreteTrip;
+//import pl.narodzinyprogramsity.utils.CreteTrip;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -20,7 +20,7 @@ public class TripParserTest {
     @Before
     public void setUp() {
         tripParser = new TripParser();
-        testTrip = CreteTrip.getOriginalTrip();
+//        testTrip = CreteTrip.getOriginalTrip();
     }
 
     @Test

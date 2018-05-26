@@ -11,14 +11,14 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "Stop_time")
-@AttributeOverrides({ @AttributeOverride(name = "id", column = @Column(name = "stop_time_id")) })
+@AttributeOverrides({@AttributeOverride(name = "id", column = @Column(name = "stop_time_id"))})
 public class StopTime extends FeedModel {
 
     public static final String TABLE_NAME = "StopTime";
     public static final StopTime NOT_FOUND = new StopTime();
 
-    @Column(name = "trip_id")
-    private String tripId;
+    @ManyToOne
+    private Trip tripId;
 
     @Column(name = "arrival_time")
     private LocalTime arrivalTime;
@@ -26,8 +26,8 @@ public class StopTime extends FeedModel {
     @Column(name = "departure_time")
     private LocalTime departureTime;
 
-    @Column(name = "stop_id")
-    private String stopId;
+    @ManyToOne
+    private Stop stopId;
 
     @Column(name = "stop_sequence")
     private String stopSequence;
@@ -45,10 +45,10 @@ public class StopTime extends FeedModel {
         super(TextUtils.EMPTY_STRING);
     }
 
-    public StopTime(String tripId,
+    public StopTime(Trip tripId,
                     LocalTime arrivalTime,
                     LocalTime departureTime,
-                    String stopId,
+                    Stop stopId,
                     String stopSequence,
                     String stopHeadsign,
                     PickupType pickupType,
@@ -65,11 +65,11 @@ public class StopTime extends FeedModel {
         this.dropOffType = dropOffType;
     }
 
-    public String getTripId() {
+    public Trip getTripId() {
         return tripId;
     }
 
-    public void setTripId(String tripId) {
+    public void setTripId(Trip tripId) {
         this.tripId = tripId;
     }
 
@@ -89,11 +89,11 @@ public class StopTime extends FeedModel {
         this.departureTime = departureTime;
     }
 
-    public String getStopId() {
+    public Stop getStopId() {
         return stopId;
     }
 
-    public void setStopId(String stopId) {
+    public void setStopId(Stop stopId) {
         this.stopId = stopId;
     }
 

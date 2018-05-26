@@ -31,10 +31,10 @@ public class StopTimeParser extends BaseFeedParser<StopTime> {
         super.parseTo(line);
         StopTime stopTime = new StopTime();
 
-        stopTime.setTripId(splitFeedInfo[TRIP_ID_COLUMN]);
+//        stopTime.setTripId(splitFeedInfo[TRIP_ID_COLUMN]);
         stopTime.setArrivalTime(getParseTime(ARRIVAL_TIME_COLUMN));
         stopTime.setDepartureTime(getParseTime(DEPARTURE_TIME_COLUMN));
-        stopTime.setStopId(splitFeedInfo[STOP_ID_COLUMN]);
+//        stopTime.setStopId(splitFeedInfo[STOP_ID_COLUMN]);
         stopTime.setStopSequence(splitFeedInfo[STOP_SEQUENCE_COLUMN]);
         stopTime.setStopHeadsign(splitFeedInfo[STOP_HEADSIGN_COLUMN]);
         stopTime.setPickupType(getPickupType());

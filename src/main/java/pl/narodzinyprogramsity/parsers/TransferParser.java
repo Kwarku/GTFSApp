@@ -24,8 +24,8 @@ public class TransferParser extends BaseFeedParser<Transfer> {
     public Transfer parseTo(String line) throws NotCorrectLineException {
         super.parseTo(line);
         Transfer transfer = new Transfer();
-        transfer.setFromStopId(splitFeedInfo[FROM_STOP_ID_COLUMN]);
-        transfer.setToStopId(splitFeedInfo[TO_STOP_ID_COLUMN]);
+//        transfer.setFromStopIdList(splitFeedInfo[FROM_STOP_ID_COLUMN]);
+//        transfer.setToStopIdList(splitFeedInfo[TO_STOP_ID_COLUMN]);
         transfer.setTransferType(getTransferType());
         transfer.setMinTransferTime(splitFeedInfo[MINIMAL_TRANSFER_TIME_COLUMN]);
 

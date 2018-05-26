@@ -28,25 +28,25 @@ public class TripParser extends BaseFeedParser<Trip> {
         super.parseTo(line);
         Trip trip = new Trip();
         trip.setId(splitFeedInfo[TRIP_ID]);
-        trip.setRouteId(splitFeedInfo[ROUTE_ID]);
+//        trip.setRouteId(splitFeedInfo[ROUTE_ID]);
         trip.setServiceId(splitFeedInfo[SERVICE_ID]);
         trip.setTripHeadSign(splitFeedInfo[TRIP_HEAD_SIGN]);
         trip.setDirectionId(splitFeedInfo[DIRECTION_ID]);
         trip.setBlockId(splitFeedInfo[BLOCK_ID]);
-        validateShapeId(trip);
+//        validateShapeId(trip);
         validateWheelchairAccessible(trip);
         validateLowFloor(trip);
 
         return trip;
     }
 
-    private void validateShapeId(Trip trip) {
-        if (isNotEmpty(SHAPE_ID)) {
-            trip.setShapeId(Integer.MIN_VALUE);
-        } else {
-            trip.setShapeId(Integer.parseInt(splitFeedInfo[SHAPE_ID]));
-        }
-    }
+//    private void validateShapeId(Trip trip) {
+//        if (isNotEmpty(SHAPE_ID)) {
+//            trip.setShapeIdList(Integer.MIN_VALUE);
+//        } else {
+//            trip.setShapeIdList(Integer.parseInt(splitFeedInfo[SHAPE_ID]));
+//        }
+//    }
 
     private void validateWheelchairAccessible(Trip trip) {
         if (isNotEmpty(WHEELCHAIR_ACCESSIBLE)) {

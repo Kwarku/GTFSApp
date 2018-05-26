@@ -3,18 +3,22 @@ package pl.narodzinyprogramsity.models;
 import pl.narodzinyprogramsity.utils.TextUtils;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
 @Table(name = "Trip")
-@AttributeOverrides({ @AttributeOverride(name = "id", column = @Column(name = "trip_id")) })
+@AttributeOverrides({@AttributeOverride(name = "id", column = @Column(name = "trip_id"))})
 public class Trip extends FeedModel {
 
     public static final String TABLE_NAME = "Trip";
     public static Trip NOT_FOUND = new Trip();
 
-    @Column(name = "route_id")
-    private String routeId;
+ 
+    @ManyToOne
+    private Route routesId;
 
     @Column(name = "service_id")
     private String serviceId;
@@ -28,8 +32,8 @@ public class Trip extends FeedModel {
     @Column(name = "blok_id")
     private String blockId;
 
-    @Column(name = "shape_id")
-    private int shapeId;
+    @ManyToMany
+    private Collection<Shape> shapeIdList = new ArrayList<>();
 
     @Column(name = "is_wheelchair_accessible")
     private boolean wheelchairAccessible;
@@ -42,33 +46,33 @@ public class Trip extends FeedModel {
         super(TextUtils.EMPTY_STRING);
     }
 
-    public Trip(String routeId,
+    public Trip(Route routeId,
                 String serviceId,
                 String tripId,
                 String tripHeadSign,
                 String directionId,
                 String blockId,
-                int shapeId,
+                List<Shape> shapeIdList,
                 boolean isWheelchairAccessible,
                 boolean isLowFloor) {
 
         super(tripId);
-        this.routeId = routeId;
+        this.routesId = routeId;
         this.serviceId = serviceId;
         this.tripHeadSign = tripHeadSign;
         this.directionId = directionId;
         this.blockId = blockId;
-        this.shapeId = shapeId;
+        this.shapeIdList = shapeIdList;
         this.wheelchairAccessible = isWheelchairAccessible;
         this.lowFloor = isLowFloor;
     }
 
-    public String getRouteId() {
-        return routeId;
+    public Route getRouteId() {
+        return routesId;
     }
 
-    public void setRouteId(String routeId) {
-        this.routeId = routeId;
+    public void setRouteId(Route routeId) {
+        this.routesId = routeId;
     }
 
     public String getServiceId() {
@@ -103,12 +107,12 @@ public class Trip extends FeedModel {
         this.blockId = blockId;
     }
 
-    public int getShapeId() {
-        return shapeId;
+    public Collection<Shape> getShapeIdList() {
+        return shapeIdList;
     }
 
-    public void setShapeId(int shapeId) {
-        this.shapeId = shapeId;
+    public void setShapeIdList(List<Shape> shapeIdList) {
+        this.shapeIdList = shapeIdList;
     }
 
     public boolean isWheelchairAccessible() {
@@ -134,23 +138,23 @@ public class Trip extends FeedModel {
         Trip trip = (Trip) o;
         return wheelchairAccessible == trip.wheelchairAccessible &&
                 lowFloor == trip.lowFloor &&
-                Objects.equals(routeId, trip.routeId) &&
+                Objects.equals(routesId, trip.routesId) &&
                 Objects.equals(serviceId, trip.serviceId) &&
                 Objects.equals(tripHeadSign, trip.tripHeadSign) &&
                 Objects.equals(directionId, trip.directionId) &&
                 Objects.equals(blockId, trip.blockId) &&
-                Objects.equals(shapeId, trip.shapeId);
+                Objects.equals(shapeIdList, trip.shapeIdList);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(routeId,
+        return Objects.hash(routesId,
                 serviceId,
                 tripHeadSign,
                 directionId,
                 blockId,
-                shapeId,
+                shapeIdList,
                 wheelchairAccessible,
                 lowFloor);
     }
@@ -158,12 +162,12 @@ public class Trip extends FeedModel {
     @Override
     public String toString() {
         return "Trip{" +
-                "routeId='" + routeId + '\'' +
+                "routeId='" + routesId + '\'' +
                 ", serviceId='" + serviceId + '\'' +
                 ", tripHeadSign='" + tripHeadSign + '\'' +
                 ", directionId='" + directionId + '\'' +
                 ", blockId='" + blockId + '\'' +
-                ", shapeId='" + shapeId + '\'' +
+                ", shapeIdList='" + shapeIdList + '\'' +
                 ", wheelchairAccessible=" + wheelchairAccessible +
                 ", lowFloor=" + lowFloor +
                 ", id='" + id + '\'' +
